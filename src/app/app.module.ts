@@ -14,7 +14,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import { FinalizadosComponent } from './components/finalizados/finalizados.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import { FinalizadosComponent } from './components/finalizados/finalizados.compo
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
