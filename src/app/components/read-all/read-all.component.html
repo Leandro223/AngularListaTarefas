@@ -1,15 +1,15 @@
 <div class="container">
 
     <button class="novo-todo mat-elevation-z8" mat-stroked-button color="primary">Nova Tarefa</button>
-    <div class="content">
+    <div class="content" *ngFor="let item of list">
 
 
         <mat-card class="mat-elevation-z8">
-            <p>Data Para Finalizar:</p>
+            <p>Data Para Finalizar: {{item.dataParaFinalizar}}</p>
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Titulo</mat-card-title>
-              <mat-card-subtitle>Descrição</mat-card-subtitle>
+              <mat-card-title>{{item.titulo}}</mat-card-title>
+              <mat-card-subtitle>{{item.descricao}}</mat-card-subtitle>
             </mat-card-header>
 
             <div class="actions">
