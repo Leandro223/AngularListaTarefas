@@ -8,6 +8,18 @@
     width: 100%;
 }
 
+.badge{
+    margin-top: 1.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.badge button{
+    margin: auto;
+    width: 100%;
+}
+
 .novo-todo{
     width: 100%;
     margin-top: 3rem;

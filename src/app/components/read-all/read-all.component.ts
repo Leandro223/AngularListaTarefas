@@ -16,6 +16,7 @@ export class ReadAllComponent implements OnInit {
   constructor(private service: TodoService) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
 
   findAll(): void {
