@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/models/todo';
 
 @Component({
   selector: 'app-read-all',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./read-all.component.css']
 })
 export class ReadAllComponent implements OnInit {
+
+  closed = 0;
+  list: Todo[] = [];
+  listFinished: Todo[] = [];
 
   constructor() { }
 
