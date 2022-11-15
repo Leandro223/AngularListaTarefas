@@ -31,4 +31,25 @@ export class UpdateComponent implements OnInit {
     })
   }
 
+  cancel(): void {
+    this.router.navigate(['']);
+  }
+
+  update(): void {
+    this.formataData();
+    this.service.update(this.todo).subscribe(
+      (resposta) => {
+        this.service.message("Informações atualizada com sucesso!");
+      },
+      (error) => {
+        this.service.message("Falha ao atualizar To-Do");
+      }
+    );
+  }
+
+  formataData(): void {
+    let data = new Date(this.todo.dataParaFinalizar);
+    this.todo.dataParaFinalizar = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`;
+  }
+
 }
